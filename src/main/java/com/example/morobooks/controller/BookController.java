@@ -27,6 +27,7 @@ public class BookController {
 
     /**
      * Controller API for retrieving book info from the external API.
+     * Part 1.
      */
     @GetMapping()
     public ResponseEntity<BooksResponseDto> searchBooks(
@@ -44,6 +45,7 @@ public class BookController {
 
     /**
      * Controller API for adding a book review.
+     * Part 2.
      */
     @PostMapping("/review")
     public ResponseEntity<GenericApiResponseDto> addBookReview(
@@ -54,6 +56,7 @@ public class BookController {
 
     /**
      * Controller API for retrieving already reviewed book info.
+     * Part 3.
      */
     @GetMapping("/details/{id}")
     public ResponseEntity<BookDto> getBookDetails(
@@ -64,6 +67,7 @@ public class BookController {
 
     /**
      * Controller API for retrieving N top-rated books.
+     * Bonus Objective.
      */
     @GetMapping("/best-sellers")
     public ResponseEntity<List<BookDto>> getBestSellerBooks(
@@ -74,6 +78,7 @@ public class BookController {
 
     /**
      * Controller API for retrieving a book's monthly average rating.
+     * Bonus Objective.
      */
     @GetMapping("/{id}/monthly-rating")
     public ResponseEntity<List<BookMonthlyAvgRatingDto>> getBookAvgMonthlyRating(
