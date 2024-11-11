@@ -1,0 +1,43 @@
+create table authors
+(
+    id         INTEGER
+        primary key,
+    birth_year INTEGER,
+    book_id    INTEGER,
+    death_year INTEGER,
+    name       varchar(255)
+);
+
+create table books
+(
+    id             INTEGER
+        primary key,
+    book_id        INTEGER,
+    download_count INTEGER,
+    title          varchar(255)
+);
+
+create table languages
+(
+    id       INTEGER
+        primary key,
+    book_id  INTEGER,
+    language varchar(255)
+);
+
+create table ratings
+(
+    id         INTEGER
+        primary key autoincrement,
+    book_id    INTEGER not null,
+    rating     REAL    not null,
+    created_at DATE
+);
+
+create table reviews
+(
+    review_id INTEGER
+        primary key,
+    book_id   bigint,
+    review    varchar(255)
+);
